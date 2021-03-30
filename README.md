@@ -18,7 +18,7 @@ to the `docker-compose.yaml` file.
 
 After that we run the container and create the database:
 ```
-docker compose up db
+docker-compose up db
 ```
 ```
 docker exec postgres_db_container createdb -U postgres snapshots
@@ -36,7 +36,7 @@ ports:
 
 and run the app via
 ```
-docker compose up
+docker-compose up
 ```
 
 After all service will be available on http://127.0.0.1:8000/ 
