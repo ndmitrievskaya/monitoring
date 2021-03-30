@@ -1,4 +1,8 @@
+# Monitoring
+
 Monitoring - the service to monitor the given url changes. 
+
+## Getting Started
 
 To initialize Postgres we should run Alembic migrations. To install Alembic and its dependencies run:
 ```
@@ -34,3 +38,9 @@ and run the app via
 ```
 docker compose up
 ```
+
+After all service will be available on http://127.0.0.1:8000/ 
+
+## Authors
+
+* **Nika Dmitrievskaya** - *Initial work* - [ndmitrievskaya](https://github.com/ndmitrievskaya)
