@@ -5,7 +5,7 @@ import httpx
 from fastapi import FastAPI
 from . import db
 
-URL = "http://worldclockapi.com/api/json/est/now"
+URL = 'http://worldclockapi.com/api/json/est/now'
 
 
 def get_app():
@@ -27,14 +27,14 @@ async def fetch_snapshot(url):
             await asyncio.sleep(30)
 
 
-@app.get("/")
+@app.get('/')
 async def root():
-    message = "Last 5 logs from database:"
+    message = 'Last 5 logs from database:'
     last_logs = await db.Snapshots.query.order_by(
         db.Snapshots.timestamp.desc()).limit(5).gino.all()
     return message, last_logs
 
 
-@app.on_event("startup")
+@app.on_event('startup')
 def startup_event():
     asyncio.create_task(fetch_snapshot(url=URL))

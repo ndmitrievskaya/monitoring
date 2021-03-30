@@ -9,7 +9,7 @@ db = Gino(
 
 
 class Snapshots(db.Model):
-    __tablename__ = "snapshots"
+    __tablename__ = 'snapshots'
 
     id = db.Column(db.BigInteger(), primary_key=True)
     timestamp = db.Column(db.DateTime())
