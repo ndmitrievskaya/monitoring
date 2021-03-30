@@ -10,7 +10,7 @@ services:
         volumes:
             - postgres_data:/var/lib/postgresql/data
         env_file:
-          - ./.env
+          - ./.env.docker
     web:
         build: .
         restart: always
@@ -18,3 +18,5 @@ services:
           - '8000:8000'
         depends_on:
             - db
+        env_file:
+            - ./.env.docker
